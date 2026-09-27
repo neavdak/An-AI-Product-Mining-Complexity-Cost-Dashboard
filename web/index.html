@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Product Mining &amp; Complexity Cost Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234f46e5'/><path d='M8 22 L14 14 L18 18 L24 9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
+  <link rel="stylesheet" href="/static/css/app.css" />
+  <script src="/vendor/plotly.min.js" defer></script>
+  <script type="module" src="/static/js/app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 32 32"><path d="M7 23 L13.5 14.5 L18 19 L25 9" /></svg>
+        </div>
+        <div>
+          <div class="brand-title">Complexity Cost</div>
+          <div class="brand-sub">AI Product Mining</div>
+        </div>
+      </div>
+      <nav class="nav" id="nav">
+        <a data-view="overview" class="active"><span class="ico">◧</span>Executive Overview</a>
+        <a data-view="matrix"><span class="ico">⊞</span>Complexity Trap Matrix</a>
+        <a data-view="bcg"><span class="ico">◎</span>BCG Portfolio Matrix</a>
+        <a data-view="plc"><span class="ico">∿</span>Product Lifecycle</a>
+        <a data-view="feedback"><span class="ico">✦</span>Feedback Intelligence</a>
+        <a data-view="portfolio"><span class="ico">☰</span>Portfolio &amp; Scenarios</a>
+        <a data-view="data"><span class="ico">⇪</span>Data &amp; Pipeline</a>
+      </nav>
+      <div class="sidebar-foot" id="pipeline-badge">
+        <div class="dot"></div><div><div class="pb-title">Pipeline</div><div class="pb-sub">connecting…</div></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="view-title">Executive Overview</h1>
+          <div class="subtitle" id="view-subtitle"></div>
+        </div>
+        <div class="topbar-actions">
+          <span class="chip" id="dataset-chip">—</span>
+          <button class="btn" id="btn-assumptions"><span>⚙</span> Model assumptions</button>
+        </div>
+      </header>
+      <section id="view" class="view"></section>
+    </main>
+  </div>
+
+  <!-- Assumptions drawer -->
+  <div class="drawer-backdrop" id="assump-backdrop"></div>
+  <aside class="drawer drawer-sm" id="assump-drawer" aria-label="Model assumptions">
+    <div class="drawer-head">
+      <div><h2>Model assumptions</h2><div class="muted small">All views recompute live.</div></div>
+      <button class="icon-btn" data-close>✕</button>
+    </div>
+    <div class="drawer-body" id="assump-body"></div>
+  </aside>
+
+  <!-- Feature detail drawer -->
+  <div class="drawer-backdrop" id="feat-backdrop"></div>
+  <aside class="drawer" id="feat-drawer" aria-label="Feature detail">
+    <div class="drawer-head" id="feat-head"></div>
+    <div class="drawer-body" id="feat-body"></div>
+  </aside>
+
+  <div class="overlay" id="overlay">
+    <div class="overlay-card">
+      <div class="spinner"></div>
+      <div class="overlay-title">Running AI pipeline</div>
+      <div class="muted small" id="overlay-stage">Starting…</div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+</body>
+</html>

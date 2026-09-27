@@ -1,0 +1,50 @@
+# Default:   docker compose up --build              -> dashboard on http://localhost:8000 (offline heuristics)
+# Local LLM: docker compose --profile llm up --build -> adds Ollama + pulls llama3.1, dashboard auto-detects it
+services:
+  dashboard:
+    build:
+      context: .
+      args:
+        INSTALL_ML: ${INSTALL_ML:-false}   # true = sentence-transformers + FAISS (bigger image)
+    ports:
+      - "8000:8000"
+    environment:
+      LLM_PROVIDER: ${LLM_PROVIDER:-auto}
+      OLLAMA_HOST: ${OLLAMA_HOST:-http://ollama:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.1}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com/v1}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      LLM_TICKET_BUDGET: ${LLM_TICKET_BUDGET:-240}
+      EMBEDDING_BACKEND: ${EMBEDDING_BACKEND:-auto}
+      DATA_SOURCE: ${DATA_SOURCE:-synthetic}
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["llm"]
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - "11434:11434"
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  ollama-pull:
+    image: ollama/ollama:latest
+    profiles: ["llm"]
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    entrypoint: ["ollama", "pull", "${OLLAMA_MODEL:-llama3.1}"]
+    volumes:
+      - ollama:/root/.ollama
+    restart: "no"
+
+volumes:
+  ollama:

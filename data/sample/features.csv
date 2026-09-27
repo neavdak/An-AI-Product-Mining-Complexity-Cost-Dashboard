@@ -1,0 +1,43 @@
+feature_id,feature_name,module,tier,description,release_date,development_cost_inr,monthly_revenue_inr,enterprise_clients,eligible_users,owner_team
+F001,Contact Management,Core CRM,All,Central contact & account records with custom fields,2023-05-21,11490000,3138000,129,48000,Core CRM Squad
+F002,Deal Pipeline,Core CRM,All,Kanban pipeline for tracking opportunities by stage,2022-12-01,8340000,5607000,125,48000,Core CRM Squad
+F003,Email Sync,Core CRM,All,Two-way Gmail / Outlook email and thread sync,2020-04-01,29480000,3391000,143,48000,Core CRM Squad
+F004,Calendar Integration,Core CRM,All,Meeting scheduling and calendar sync,2020-09-05,5420000,4576000,153,48000,Core CRM Squad
+F005,Lead Scoring,Core CRM,Pro+,Rules + ML based lead prioritisation,2025-08-02,15410000,1674000,87,29000,Core CRM Squad
+F006,Activity Timeline,Core CRM,All,Chronological log of every customer touchpoint,2023-04-25,6160000,3601000,132,48000,Core CRM Squad
+F007,Custom Report Builder,Analytics,Pro+,Drag-and-drop report designer with joins,2021-10-24,21800000,5622000,141,29000,Analytics Squad
+F008,Executive Dashboards,Analytics,Pro+,KPI dashboards for sales leadership,2025-08-04,18070000,3268000,119,29000,Analytics Squad
+F009,Revenue Forecasting,Analytics,Enterprise,Quota and pipeline based revenue forecasts,2025-05-07,17920000,1911000,79,11500,Analytics Squad
+F010,Legacy PDF Report Exporter,Analytics,All,Pixel-perfect PDF export engine (v1 renderer),2022-03-25,17600000,116000,14,48000,Analytics Squad
+F011,Pivot Table Explorer,Analytics,Pro+,Spreadsheet-style pivot analysis,2023-12-23,15140000,36000,13,29000,Analytics Squad
+F012,Cohort Analysis,Analytics,Enterprise,Retention cohorts for customer accounts,2026-02-20,15080000,561000,28,11500,Analytics Squad
+F013,AI Email Assistant,AI,Pro+,LLM drafted follow-up emails,2025-11-16,9280000,563000,39,29000,AI Squad
+F014,Conversation Intelligence,AI,Enterprise,Call transcription and deal-risk signals,2026-05-02,8170000,411000,29,11500,AI Squad
+F015,Predictive Churn Alerts,AI,Enterprise,Early warning for at-risk accounts,2025-12-06,16770000,372000,34,11500,AI Squad
+F016,Chatbot Builder v1,AI,Pro+,Rule-based website chatbot designer,2020-04-18,19760000,134000,22,29000,AI Squad
+F017,Salesforce Bi-directional Sync,Integrations,Enterprise,Real-time object sync with Salesforce,2022-09-01,19250000,6456000,161,11500,Integrations Squad
+F018,Slack Notifications,Integrations,All,Deal and task alerts in Slack channels,2023-02-20,10790000,919000,167,48000,Integrations Squad
+F019,Zapier Connector,Integrations,Pro+,No-code automation triggers,2024-04-06,4380000,70000,35,29000,Integrations Squad
+F020,Legacy SOAP API,Integrations,Enterprise,XML/SOAP API kept for pre-2019 integrations,2023-08-17,7510000,82000,77,11500,Integrations Squad
+F021,On-prem LDAP Connector,Integrations,Enterprise,Directory sync for self-hosted identity servers,2021-07-09,17060000,197000,49,11500,Integrations Squad
+F022,Webhooks,Integrations,Pro+,Outbound event webhooks,2022-05-01,4180000,180000,8,29000,Integrations Squad
+F023,Team Inbox,Collaboration,All,Shared inbox for customer-facing teams,2025-09-25,19440000,1699000,85,48000,Collaboration Squad
+F024,Internal Wiki,Collaboration,All,Knowledge base pages inside the CRM,2019-11-14,6640000,39000,5,48000,Collaboration Squad
+F025,Video Meeting Recorder,Collaboration,Pro+,Native meeting recording and playback,2020-06-23,11680000,417000,35,29000,Collaboration Squad
+F026,Shared Notes,Collaboration,All,Collaborative notes on accounts,2024-01-15,1600000,277000,16,48000,Collaboration Squad
+F027,Gamification Leaderboards,Collaboration,Pro+,"Sales contests, badges and leaderboards",2023-03-10,18800000,144000,5,29000,Collaboration Squad
+F028,SSO / SAML,Admin & Security,Enterprise,Single sign-on via SAML 2.0 and OIDC,2023-03-19,11180000,4363000,177,11500,Admin & Security Squad
+F029,Role-based Permissions,Admin & Security,All,"Granular roles, profiles and field-level security",2023-02-08,20310000,4893000,142,48000,Admin & Security Squad
+F030,Audit Logs,Admin & Security,Enterprise,Immutable log of admin and data changes,2022-01-23,9530000,2901000,126,11500,Admin & Security Squad
+F031,White-label Branding,Admin & Security,Enterprise,"Custom domains, logos and themes",2024-09-27,4390000,141000,34,11500,Admin & Security Squad
+F032,Data Residency Controls,Admin & Security,Enterprise,Region-pinned data storage (IN / EU / US),2025-03-09,15690000,3565000,127,11500,Admin & Security Squad
+F033,Sandbox Environments,Admin & Security,Enterprise,Isolated test orgs for admins,2026-03-14,16730000,428000,11,11500,Admin & Security Squad
+F034,Email Campaigns,Marketing,Pro+,Bulk email campaigns with templates,2023-05-01,14270000,3400000,139,29000,Marketing Squad
+F035,Landing Page Builder,Marketing,Pro+,Drag-and-drop landing pages,2022-07-08,14110000,760000,55,29000,Marketing Squad
+F036,Social Media Scheduler,Marketing,Pro+,"Schedule posts to LinkedIn, X and Facebook",2022-05-20,10570000,91000,19,29000,Marketing Squad
+F037,SMS Campaigns,Marketing,Pro+,Bulk SMS with DLT template support,2023-04-18,4830000,123000,33,29000,Marketing Squad
+F038,Web Forms,Marketing,All,Embeddable lead capture forms,2021-10-17,6640000,3708000,116,48000,Marketing Squad
+F039,Mobile App,Mobile,All,Native iOS and Android CRM app,2020-09-20,27110000,3052000,117,48000,Mobile Squad
+F040,Offline Mode,Mobile,All,Local-first offline editing on mobile,2022-05-08,19530000,174000,14,48000,Mobile Squad
+F041,Business Card Scanner,Mobile,All,OCR contact capture from business cards,2023-03-09,3510000,289000,16,48000,Mobile Squad
+F042,Territory Management,Core CRM,Enterprise,Geographic and account-based territory rules,2020-12-09,9480000,939000,47,11500,Core CRM Squad
