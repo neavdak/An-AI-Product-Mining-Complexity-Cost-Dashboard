@@ -1,0 +1,5 @@
+# Optional: higher-quality semantic embeddings + FAISS vector index.
+# The app automatically falls back to TF-IDF/LSA + scikit-learn if these are absent.
+-r requirements.txt
+sentence-transformers>=2.7
+faiss-cpu>=1.8
